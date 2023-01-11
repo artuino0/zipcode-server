@@ -4,6 +4,7 @@ import cors from "cors";
 import commonRouter from "../routes/common.routes";
 import sequelize from "../database/mssql.connect";
 import postalCodeRouter from "../routes/postal-code.routes";
+import userRouter from "../routes/user.routes";
 
 class Server {
   app: Application;
@@ -11,6 +12,7 @@ class Server {
   BASE_API: string = "/api/v1";
   API_ROUTES = {
     postalCodeRoute: "/zipcode",
+    userRoute: "/user",
   };
 
   constructor() {
@@ -43,6 +45,7 @@ class Server {
       `${this.BASE_API}${this.API_ROUTES.postalCodeRoute}`,
       postalCodeRouter
     );
+    this.app.use(`${this.BASE_API}${this.API_ROUTES.userRoute}`, userRouter);
   }
 
   listen() {

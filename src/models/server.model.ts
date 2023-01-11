@@ -2,6 +2,7 @@ import express, { Application } from "express";
 import morgan from "morgan";
 import cors from "cors";
 import commonRouter from "../routes/common.routes";
+import sequelize from "../database/mssql.connect";
 
 class Server {
   app: Application;
@@ -11,8 +12,20 @@ class Server {
 
   constructor() {
     this.app = express();
+    this.database();
     this.middlewares();
     this.routes();
+  }
+
+  async database() {
+    sequelize
+      .authenticate()
+      .then((rs) => {
+        console.log("Database connected successfully");
+      })
+      .catch((e) => {
+        throw new Error(`Can't connect to database: ${e.name}`);
+      });
   }
 
   middlewares() {

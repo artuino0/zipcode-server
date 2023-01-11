@@ -14,7 +14,9 @@
 ## Instalaciones
 
 El proyecto cuenta con las instalaciones depaquetes requeridos en el archivo **package.json** pero este esta desarrollado con **TypeScript** por lo que necesitaremos correr los siguientes comandos:
-####Install
+
+#### Install
+
 `$ npm install typescript -g`
 
 `$ npm install nodemon -g`
@@ -33,7 +35,7 @@ Una vez instaladas las dependencias necesarias vamos a crear el archivo **.env**
 
 Para la base de datos requiere la descarga del backup desde el siguiente enlace, hay que restaurar la base de datos:
 
-##[PostalCodes Database](https://mega.nz/file/aOZxnKIQ#eUUjuTtUTykhbH6UxorzEFfijG6k96sorip9XP5OKWs "PostalCodes Database")
+## [PostalCodes Database](https://mega.nz/file/aOZxnKIQ#eUUjuTtUTykhbH6UxorzEFfijG6k96sorip9XP5OKWs "PostalCodes Database")
 
 Los siguientes comandos son indispensbles para probar y contruir el proyecto
 

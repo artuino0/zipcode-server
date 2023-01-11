@@ -37,16 +37,19 @@ Para la base de datos requiere la descarga del backup desde el siguiente enlace,
 
 Los siguientes comandos son indispensbles para probar y contruir el proyecto
 
-####Test run
+#### Test run
+
 `$ npm run dev`
 
-####Build proyect
+#### Build proyect
+
 `$ npm run build`
 
-####Test run
+#### Test run
+
 `$ npm run dev`
 
-##Consultas
+## Consultas
 
 El siguiente codigo es un ejemplo de una consulta realizada con **axios**
 
@@ -72,7 +75,8 @@ axios
   });
 ```
 
-#Contacto
+# Contacto
+
 Para cualquier duda o comentario puede contactarse a mi correo:
 
 arturosistemas94@gmail.com

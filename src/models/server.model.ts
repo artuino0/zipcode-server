@@ -3,12 +3,15 @@ import morgan from "morgan";
 import cors from "cors";
 import commonRouter from "../routes/common.routes";
 import sequelize from "../database/mssql.connect";
+import postalCodeRouter from "../routes/postal-codes.routes";
 
 class Server {
   app: Application;
   PORT: string = process.env.PORT || "3000";
   BASE_API: string = "/api/v1";
-  API_ROUTES = {};
+  API_ROUTES = {
+    postalCodeRoute: "/zipcode",
+  };
 
   constructor() {
     this.app = express();
@@ -36,6 +39,10 @@ class Server {
 
   routes() {
     this.app.use(`${this.BASE_API}`, commonRouter);
+    this.app.use(
+      `${this.BASE_API}${this.API_ROUTES.postalCodeRoute}`,
+      postalCodeRouter
+    );
   }
 
   listen() {

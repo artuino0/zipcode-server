@@ -1,4 +1,6 @@
 #ignora modulos de node
 node_modules
+#ignora el build de produccion
+dist
 #ignora las variables de entorno
 .env

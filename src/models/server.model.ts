@@ -3,7 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import commonRouter from "../routes/common.routes";
 import sequelize from "../database/mssql.connect";
-import postalCodeRouter from "../routes/postal-codes.routes";
+import postalCodeRouter from "../routes/postal-code.routes";
 
 class Server {
   app: Application;

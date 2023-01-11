@@ -13,15 +13,7 @@ const UserModel = dbConnection.define("User", {
     unique: true,
     allowNull: false,
   },
-  firstName: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  lastName: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  password: {
+  apiKey: {
     type: Sequelize.STRING,
     allowNull: false,
   },
